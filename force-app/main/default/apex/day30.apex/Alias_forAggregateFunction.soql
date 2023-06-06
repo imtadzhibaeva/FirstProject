@@ -1,0 +1,3 @@
+SELECT COUNT(ID) MyOppsCount, SUM(Amount) TotalAmount,  
+      MAX(Amount) HighestAmount,  MIN(Amount) LowestAmount, AVG(Amount) AverageAmount
+FROM Opportunity

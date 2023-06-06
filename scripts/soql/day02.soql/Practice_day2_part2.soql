@@ -1,0 +1,45 @@
+// Child to Parent Query 
+// Get all Contact Name and Account Name that contact belong to 
+// Filter the contact to only show contact with Account 
+
+//SELECT Name , AccountId, Account.Name
+//FROM Contact
+//WHERE AccountId != null 
+
+
+
+// Get all the casre records Subject and Account Name
+//  that belong to Account with Name 
+// starts with United 
+
+//SELECT Subject,  Account.Name, Contact.Name, CreatedBy.Name 
+//FROM Case
+//WHERE Account.Name LIKE 'United%'
+
+
+// Get all oppportunity Name, Owner Name, Account Name
+// From Opportunity
+
+//SELECT Name, Owner.Name, Account.Name
+//FROM Opportunity
+
+
+// Get all the Book Name, Price, Contact Name
+// Sort the result by Contact Name and show empty values on the bottom
+// Filter the result to show only Books with Contact Name Snow
+//SELECT  Name, Price__c, Contact__r.Name
+//FROM Book__c
+//WHERE Contact__r.Name = 'Snow'
+//ORDER BY Price__c ASC NULLS LAST
+
+
+// Get All the Books Name, Price, Contact Name 
+// Sort the result by Conact Name and show empty values on the bottom 
+// Filter the result to show only Books with Contact Name Snow
+// SELECT Name , Price__c , Contact__r.Name
+// FROM Book__c
+// WHERE Contact__r.Name  = 'Snow'
+// Agregate functionn
+SELECT COUNT(Id), COUNT_DISTINCT(Name), 
+        SUM(Amount),MAX(Amount), MIN(Amount), AVG(Amount)
+FROM OPPORTUNITY

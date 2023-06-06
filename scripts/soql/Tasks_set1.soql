@@ -1,0 +1,7 @@
+
+SELECT Name, Rating, AnnualRevenue, Industry
+FROM Account 
+WHERE Rating IN ('Hot' , 'Warm')
+
+ SELECT  Name, LeadSource, Title, Company
+ FROM Lead 

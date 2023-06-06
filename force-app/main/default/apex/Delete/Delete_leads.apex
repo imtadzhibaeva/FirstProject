@@ -1,0 +1,1 @@
+delete [SELECT id FROM Lead WHERE Name LIKE '%Jon Snow%'] ;
